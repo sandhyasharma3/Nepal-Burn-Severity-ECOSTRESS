@@ -30,13 +30,12 @@ library(patchwork)
 # -----------------------------------------------------------------------------
 # paths
 # -----------------------------------------------------------------------------
+data_dir <- "data/"
+output_dir <- "outputs/"
+pts_file  <- file.path(data_dir, "Am_pmDATA_100k_clean.rds")
+pcnm_file <- file.path(data_dir, "newpcnms", "pcnm_true_150km_radius_am_pm.rds")
+burn_file <- file.path(data_dir, "dNBRfiltered.tif")
 
-rdir <- "D:/Users/sharm201/Desktop/RESEARCH2NDHALF/standardized_rasters/clean_rasters"
-
-pts_file  <- file.path(rdir, "Am_pmDATA_100k_clean.rds")
-pcnm_file <- file.path(rdir, "newpcnms", "pcnm_true_150km_radius_am_pm.rds")
-burn_file <- file.path(rdir, "dNBRfiltered.tif")
-out_dir   <- file.path(rdir, "ampm_RF_results")
 
 if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
 
@@ -113,17 +112,17 @@ cat("PCNM rows:", nrow(pcnm20), "- Points rows:", nrow(pts), "\n")
 # -----------------------------------------------------------------------------
 
 raster_files <- c(
-  file.path(rdir, "Aspect_deg.tif"),
-  file.path(rdir, "Elevation.tif"),
-  file.path(rdir, "Slope.tif"),
+  file.path(data_dir, "Aspect_deg.tif"),
+  file.path(data_dir, "Elevation.tif"),
+  file.path(data_dir, "Slope.tif"),
   burn_file,
-  file.path(rdir, "LC.tif"),
-  file.path(rdir, "ESI_AM.tif"),
-  file.path(rdir, "ESI_PM.tif"),
-  file.path(rdir, "ET_AM.tif"),
-  file.path(rdir, "ET_PM.tif"),
-  file.path(rdir, "WUE_AM.tif"),
-  file.path(rdir, "WUE_PM.tif")
+  file.path(data_dir, "LC.tif"),
+  file.path(data_dir, "ESI_AM.tif"),
+  file.path(data_dir, "ESI_PM.tif"),
+  file.path(data_dir, "ET_AM.tif"),
+  file.path(data_dir, "ET_PM.tif"),
+  file.path(data_dir, "WUE_AM.tif"),
+  file.path(data_dir, "WUE_PM.tif")
 )
 
 rstack <- rast(raster_files)
