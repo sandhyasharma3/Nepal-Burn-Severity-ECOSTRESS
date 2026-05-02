@@ -27,12 +27,13 @@ library(patchwork)
 # paths
 # -----------------------------------------------------------------------------
 
-rdir <- "D:/Users/sharm201/Desktop/RESEARCH2NDHALF/standardized_rasters/clean_rasters"
+data_dir <- "data/"
+output_dir <- "outputs/"
 
-pts_file  <- file.path(rdir, "AnnualDATA_100k_clean.rds")
-pcnm_file <- file.path(rdir, "newpcnms", "pcnm_true_150km_radius.rds")
-burn_file <- file.path(rdir, "dNBRfiltered.tif")
-out_dir   <- file.path(rdir, "annual_RF_results")
+pts_file  <- file.path(data_dir, "AnnualDATA_100k_clean.rds")
+pcnm_file <- file.path(data_dir, "newpcnms", "pcnm_true_150km_radius.rds")
+burn_file <- file.path(data_dir, "dNBRfiltered.tif")
+
 
 if (!dir.exists(out_dir)) dir.create(out_dir, recursive = TRUE)
 
@@ -112,17 +113,17 @@ cat("PCNM rows:", nrow(pcnm20), "- Points rows:", nrow(pts), "\n")
 # -----------------------------------------------------------------------------
 
 raster_files <- c(
-  file.path(rdir, "Aspect_deg.tif"),
-  file.path(rdir, "Elevation.tif"),
-  file.path(rdir, "Slope.tif"),
+  file.path(data_dir, "Aspect_deg.tif"),
+  file.path(data_dir, "Elevation.tif"),
+  file.path(data_dir, "Slope.tif"),
   burn_file,
-  file.path(rdir, "LC.tif"),
-  file.path(rdir, "ESI_Annual_Mean.tif"),
-  file.path(rdir, "ESI_SS.tif"),
-  file.path(rdir, "ET_Annual_Mean.tif"),
-  file.path(rdir, "ET_SS.tif"),
-  file.path(rdir, "WUE_Annual.tif"),
-  file.path(rdir, "WUE_SS.tif")
+  file.path(data_dir, "LC.tif"),
+  file.path(data_dir, "ESI_Annual_Mean.tif"),
+  file.path(data_dir, "ESI_SS.tif"),
+  file.path(data_dir, "ET_Annual_Mean.tif"),
+  file.path(data_dir, "ET_SS.tif"),
+  file.path(data_dir, "WUE_Annual.tif"),
+  file.path(data_dir, "WUE_SS.tif")
 )
 
 rstack <- rast(raster_files)
