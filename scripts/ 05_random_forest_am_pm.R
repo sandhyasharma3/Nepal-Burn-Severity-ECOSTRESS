@@ -1,5 +1,5 @@
 # =============================================================================
-# Author : Sandhya Sharma
+# Author : Anonymous for peer review
 # Year   : 2026
 #
 # Burn Severity Prediction - AM/PM ECOSTRESS Model
