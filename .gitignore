@@ -1,0 +1,27 @@
+# Large spatial data files
+*.tif
+*.tiff
+*.img
+*.rds
+*.rda
+*.RData
+
+# Tabular outputs
+*.csv
+
+# Shapefiles
+*.shp
+*.dbf
+*.shx
+*.prj
+*.cpg
+
+# R session files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# OS junk
+.DS_Store
+Thumbs.db
