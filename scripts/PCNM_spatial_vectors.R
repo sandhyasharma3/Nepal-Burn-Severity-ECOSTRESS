@@ -1,6 +1,4 @@
 Pcnm spatial vectors · R
-Copy
-
 # =============================================================================
 # Author : Sandhya Sharma
 # Year   : 2026
