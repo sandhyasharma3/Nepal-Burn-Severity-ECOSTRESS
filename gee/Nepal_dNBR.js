@@ -136,7 +136,7 @@ Map.addLayer(
 // 9) Export to Google Drive
 // Update 'folder' to your Drive folder name
 // ---------------------------
-var exportFolder = 'YOUR_DRIVE_FOLDER_NAME';
+var exportFolder = 'YOUR_FOLDER_NAME';
  
 Export.image.toDrive({
   image:       dNBR.clip(roi),
