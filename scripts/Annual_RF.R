@@ -1,5 +1,5 @@
 # =============================================================================
-# Author : Anonymous for peer review
+# Author : Sandhya Sharma
 # Year   : 2026
 #
 # Burn Severity Prediction - Annual ECOSTRESS Model
